@@ -1,0 +1,22 @@
+{
+  "name": "nozomu-bot",
+  "version": "1.0.0",
+  "description": "Discord server bot written in NodeJS.",
+  "main": "app/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/makotomiyamoto/nozomu-bot.git"
+  },
+  "author": "MakotoMiyamoto",
+  "license": "SEE LICENSE IN LICENSE",
+  "bugs": {
+    "url": "https://github.com/makotomiyamoto/nozomu-bot/issues"
+  },
+  "homepage": "https://github.com/makotomiyamoto/nozomu-bot#readme",
+  "dependencies": {
+    "discord.js": "^12.2.0"
+  }
+}
