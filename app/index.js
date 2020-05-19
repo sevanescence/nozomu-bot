@@ -16,6 +16,7 @@ client.on('ready', () => {
 client.on('message', msg => {
     if (msg.channel.type === 'dm' && !msg.author.bot) {
         debug(`dm received from ${msg.author.username}#${msg.author.discriminator}`);
+        msg.channel.send(`Hey there ${msg.author.username}, nice to meet you!`);
     }
 });
 
