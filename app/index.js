@@ -1,17 +1,16 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
+const token = process.env.BOT_TOKEN || process.env.TEST_TOKEN;
 
-client.on('ready', msg => {
+client.on('ready', () => {
     console.log(`Logged in as ${client.user.tag}`);
 });
 
 // dm interaction endpoint
-client.on('message', (msg, i) => {
+client.on('message', msg => {
     if (msg.channel.type === 'dm' && !msg.author.bot) {
-        msg.channel.send('Hey there! ' + 
-        'Sorry, I\'m gonna say this every time you talk, I\'m still in testing phase.');
-        console.log(i);
+        console.log(`dm received from ${msg.author}`);
     }
 });
 
-client.login(process.env.BOT_TOKEN);
+client.login(token);
