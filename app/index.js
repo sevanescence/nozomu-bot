@@ -6,7 +6,7 @@ client.on('ready', msg => {
 });
 
 client.on('message', msg => {
-    if (msg.channel.type === 'dm') {
+    if (msg.channel.type === 'dm' && !msg.author.bot) {
         msg.channel.send('Hey there!' + 
         'Sorry, I\'m gonna say this every time you talk, I\'m still in testing phase.');
     }
