@@ -1,1 +1,1 @@
-worker: node app/index.js
+worker: NODE_ENV=production node app/index.js
