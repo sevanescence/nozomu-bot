@@ -8,7 +8,7 @@ const token = prod ? process.env.BOT_TOKEN : () => {
 };
 
 client.on('ready', () => {
-    console.log(`Logged in as ${client.user.tag}`);
+    console.log(`Logged in as ${client.user.tag} in ${prod ? 'production':'deployment'} mode.`);
 });
 
 // dm interaction endpoint
