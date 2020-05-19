@@ -6,8 +6,9 @@ client.on('ready', msg => {
 });
 
 client.on('message', msg => {
-    if (msg.author.username === "MakotoMiyamoto" && msg.channel === ChannelType.dm) {
-        msg.channel.send("Hey there, Makoto!");
+    if (msg.channel.type === ChannelType.dm) {
+        msg.channel.send("Hey there!" + 
+        "Sorry, I'm gonna say this every time you talk, I'm still in testing phase.");
     }
 });
 
