@@ -5,10 +5,12 @@ client.on('ready', msg => {
     console.log(`Logged in as ${client.user.tag}`);
 });
 
-client.on('message', msg => {
+// dm interaction endpoint
+client.on('message', (msg, i) => {
     if (msg.channel.type === 'dm' && !msg.author.bot) {
-        msg.channel.send('Hey there!' + 
+        msg.channel.send('Hey there! ' + 
         'Sorry, I\'m gonna say this every time you talk, I\'m still in testing phase.');
+        console.log(i);
     }
 });
 
